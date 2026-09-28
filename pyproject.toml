@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pygit"
+version = "0.1.0"
+description = "A Git implementation written from scratch in pure Python, interoperable with real git"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "useless-husband" }]
+keywords = ["git", "education", "version-control"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Version Control :: Git",
+    "Intended Audience :: Education",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/useless-husband/pygit"
+
+[project.scripts]
+pygit = "pygit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
